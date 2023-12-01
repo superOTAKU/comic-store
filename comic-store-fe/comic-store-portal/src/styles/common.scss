@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*flex布局*/
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* 外边距、内边距全局样式 */
+@for $i from -40 through 40 {
+    .mt-#{$i} {
+      margin-top: #{$i}px !important;
+    }
+    .mr-#{$i} {
+      margin-right: #{$i}px !important;
+    }
+    .mb-#{$i} {
+      margin-bottom: #{$i}px !important;
+    }
+    .ml-#{$i} {
+      margin-left: #{$i}px !important;
+    }
+    .ma-#{$i} {
+      margin: #{$i}px !important;
+    }
+    .mx-#{$i} {
+      margin-right: #{$i}px !important;
+      margin-left: #{$i}px !important;
+    }
+    .my-#{$i} {
+      margin-top: #{$i}px !important;
+      margin-bottom: #{$i}px !important;
+    }
+    .pt-#{$i} {
+      padding-top: #{$i}px !important;
+    }
+    .pr-#{$i} {
+      padding-right: #{$i}px !important;
+    }
+    .pb-#{$i} {
+      padding-bottom: #{$i}px !important;
+    }
+    .pl-#{$i} {
+      padding-left: #{$i}px !important;
+    }
+    .py-#{$i} {
+      padding-top: #{$i}px !important;
+      padding-bottom: #{$i}px !important;
+    }
+    .pa-#{$i} {
+      padding: #{$i}px !important;
+    }
+    .px-#{$i} {
+      padding-right: #{$i}px !important;
+      padding-left: #{$i}px !important;
+    }
+  }
+
+/*字体*/
+.cs-l-header {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+  .cs-header {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+  .cs-dialog-header {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .cs-sub-header {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+  .cs-content {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+  }
+  .cs-sub-content {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 18px;
+  }
+
+  /*常用布局相关*/
+  .full-width {
+    width: 100%;
+  }
+
+  .full-height {
+    height: 100%;
+  }
+
+  .cs-container {
+    width: 1200px;
+    margin: 0 auto;
+  }

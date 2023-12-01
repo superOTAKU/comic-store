@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: web-service
+server:
+  port: 15001
+# 第三方中间件依赖配置
+
