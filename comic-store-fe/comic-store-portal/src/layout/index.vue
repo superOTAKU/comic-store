@@ -11,6 +11,28 @@
 <script setup>
 import AppHeader from './header/index.vue'
 import AppFooter from './footer/index.vue'
+import {onMounted, onUnmounted, watch} from 'vue'
+import {useGlobalStore} from '@/stores/modules/global'
+
+const globalStore = useGlobalStore()
+
+onMounted(() => {
+    watch(() => globalStore.skinMode, () => {
+        if (globalStore.skinMode == 'LIGHT') {
+            document.documentElement.classList.remove('dark')
+        } else {
+            document.documentElement.classList.add('dark')
+        }
+    }, {
+        immediate: true
+    })
+})
+
+onUnmounted(() => {
+    document.documentElement.classList.remove('dark')
+})
+
+
 </script>
 
 <style>

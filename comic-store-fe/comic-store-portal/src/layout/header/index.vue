@@ -28,8 +28,8 @@ import NavRight from './navRight/index.vue'
     display: flex;
     align-items: center;
     position: fixed;
-    background-color: white;
-    border-bottom: 1px solid #dcdfe6;
+    background-color: var(--el-background-color);
+    border-bottom: 1px solid var(--el-border-color);
 }
 
 .nav-inner {

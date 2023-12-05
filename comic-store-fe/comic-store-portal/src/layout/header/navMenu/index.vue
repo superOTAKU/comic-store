@@ -1,6 +1,6 @@
 <template>
 <div class="nav-menu-wrapper">
-    <el-menu mode="horizontal" :router="true" default-active="0">
+    <el-menu mode="horizontal" :router="true">
         <el-menu-item v-for="(item, i) in menus" :route="item.path" :index="i + ''">{{ item.title }}</el-menu-item>
     </el-menu>
 </div>

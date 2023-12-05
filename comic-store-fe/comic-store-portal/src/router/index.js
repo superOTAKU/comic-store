@@ -3,6 +3,8 @@ import Home from '@/views/home/index.vue'
 import Category from '@/views/category/index.vue'
 import Update from '@/views/update/index.vue'
 import Ranking from '@/views/ranking/index.vue'
+import Login from '@/views/login/index.vue'
+import Register from '@/views/register/index.vue'
 import {createRouter, createWebHistory} from 'vue-router'
 
 const routes = [
@@ -27,6 +29,14 @@ const routes = [
                 component: Ranking
             }
         ]
+    },
+    {
+        path: '/login',
+        component: Login
+    },
+    {
+        path: '/register',
+        component: Register
     }
 ]
 

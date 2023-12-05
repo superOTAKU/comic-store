@@ -17,18 +17,22 @@
       </template>
    </el-dropdown>
    <el-divider direction="vertical"/>
-   <el-button size="small" text :icon="skinBtnIcon" class="cs-content" @click="globalStore.toggleSkinMode()"></el-button>
+   <el-button ref="toggleBtnRef" size="small" text :icon="skinBtnIcon" class="cs-content" @click="handleToggleSkin()"></el-button>
    <el-divider direction="vertical"/>
-   <el-button text>Login</el-button>
+   <el-button text @click="router.push('/login')">Login</el-button>
    <el-divider direction="vertical"/>
-   <el-button text>Register</el-button>
+   <el-button text @click="router.push('/register')">Register</el-button>
 </div>    
 </template>
 
 <script setup>
 import { useGlobalStore } from '@/stores/modules/global';
 import {Sunny, Moon} from '@element-plus/icons-vue'
-import {computed} from 'vue'
+import {computed, ref} from 'vue'
+import {useRouter} from 'vue-router'
+
+const router = useRouter()
+const toggleBtnRef = ref()
 
 const globalStore = useGlobalStore()
 
@@ -39,5 +43,10 @@ const skinBtnIcon = computed(() => {
       return Moon
    }
 })
+
+const handleToggleSkin = () => {
+   globalStore.toggleSkinMode()
+   toggleBtnRef.value.ref.blur()
+}
 
 </script>
